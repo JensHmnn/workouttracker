@@ -9,6 +9,7 @@ import datetime
 import sqlalchemy
 
 # Function to generate random dates
+# ランダムな日付を生成する関数です
 def generate_random_dates(start_date, end_date, num_dates):
     """
     Generates a list of random dates within a specified range.
@@ -35,25 +36,30 @@ def generate_random_dates(start_date, end_date, num_dates):
     date_list.sort()
     return date_list
 
+# Function to generate a Pandas df of 200 random workout entries
+# 0個のランダムなエントリーのデータフレームをする関数
 def generate_random_df():
     """Generates a Pandas dataframe of 200 random workout entries with data for the columns: ID, Date, Workout, Calories, Duration.
     200個のランダムなエントリーのデータフレームを作成する。列のラベルはID, Date, Workout, Calories, Durationだ。"""
 
     db_randm = pd.DataFrame()
 
-    # Create ID list
+    # Create ID col
+    # 「ID」の列
     id_list = []
     for n in range(1, 201):
         id_list.append(n)
     db_randm["ID"] = id_list
 
-    # Create random dates 
+    # Create Date col
+    # 「Date」（日付）の列
     start = datetime.date(2024, 1, 1)
     end = datetime.date(2025, 12, 31)
     num_dates = 200
     db_randm["Date"] = generate_random_dates(start, end, num_dates)
 
     # Create Workout list
+    # 「Workout」（運動種類）の列
     workout_list = []
     for n in range(num_dates):
         x = random.randint(0, 2)
@@ -67,6 +73,7 @@ def generate_random_df():
     db_randm["Workout"] = workout_list
 
     # Create cols for workout durations and burned calories
+    # 「Calories」（消費カロリー）と「Duration」（運動時間）の列
     duration_list = [random.randint(20, 181) for n in range(num_dates)]
     calories_list = [round(170/30*n)+random.randint(-45, 45) for n in duration_list]
     db_randm["Calories"]  = calories_list
