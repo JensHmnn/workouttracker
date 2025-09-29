@@ -30,7 +30,7 @@ Ticking the "darkmode", will turn on the darkmode.
 On the bottom left, you can use the dropdown to select a chart type.\
 This allows you to gain deeper insights into your past workout data.
 
-<img width="500" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic6_chartselection.PNG">
+<img width="300" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic6_chartselection.PNG">
 
 The first chart is a scatterplot that allows to see how many calories were burned depending on how long the workout was.
 
