@@ -6,9 +6,9 @@ This project's goal is to create an app for tracking workouts and utilizing this
 
 <img width="500" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic1.PNG">
 
-One the left side of the app you can use the different entry fields to add your own workouts to the database./
-If you don't fill in your own calculated "calories" value for the calories you burned, the app will calculate the burned calories automatically./
-The "description" field is also optional and can be used to add comments or other remarks./
+One the left side of the app you can use the different entry fields to add your own workouts to the database.\
+If you don't fill in your own calculated "calories" value for the calories you burned, the app will calculate the burned calories automatically.\
+The "description" field is also optional and can be used to add comments or other remarks.\
 <img width="250" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic2_editdata.PNG">
 
 The data that has been added to the workout database before can be seen in the table on the bottom right./
