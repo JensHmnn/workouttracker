@@ -13,7 +13,7 @@ The "description" field is also optional and can be used to add comments or othe
 アプリの左側には入力欄があり、そこから自分のワークアウトをデータベースに追加することができます。\
 今まで選択できる運動の種類は、「上半身トレーニング」(Upper Body)、「下半身トレーニング」(Lower Body)、そして「有酸素運動」(Cardio)の3種類です。\
 「Calories」については、自分で計算した消費カロリーを入力しなくても、アプリが自動的に計算します。\
-「Duration」では、ワークアウトの時間を分単位で入力になります。
+「Duration」では、ワークアウトの時間を分単位で入力になります。\
 また、「Description」欄も任意入力で、備考を追加するために利用できます。
 
 <img width="250" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic2_editdata.PNG">
