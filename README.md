@@ -11,8 +11,8 @@ If you don't fill in your own calculated "calories" value for the calories you b
 The "description" field is also optional and can be used to add comments or other remarks.
 
 アプリの左側には入力欄があり、そこから自分のワークアウトをデータベースに追加することができます。\
-消費カロリーについては、自分で計算した「calories」の値を入力しなくても、アプリが自動的に消費カロリーを計算します。\
-また、「description」欄は任意入力で、コメントや備考を追加するために利用できます。
+「Calories」については、自分で計算した消費カロリーを入力しなくても、アプリが自動的に計算します。\
+また、「Description」欄も任意入力で、備考を追加するために利用できます。
 
 <img width="250" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic2_editdata.PNG">
 
