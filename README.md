@@ -4,4 +4,6 @@ This project's goal is to create an app for tracking workouts and utilizing this
 
 このプロジェクトの目的は、ジムでの運動を記録するアプリを作成し、そのデータを活用してさまざまな分析や洞察を得られるようにすることです。現在はまだ初期段階にあります。将来的には、選択できる運動の種類と、データを視覚化できるグラフを増やす予定です。また、運動強度などを加味することで、自動的に算出される消費カロリーの精度を高めていきます。「workout.db」はランダムに生成された運動トデータのSQLデータベースです。このデータベースを作成するために使用したコードは「generate_db.py」ファイルにあります。
 
-<img width="1162" alt="SCR-20230502-nedr" src="https://github.com/JensHmnn/workouttracker/pictures/app_pic1.PNG">
+<img width="250" alt="tracker" src="https://github.com/JensHmnn/workouttracker/pictures/app_pic1.PNG">
+
+![Tracker](https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic1.PNG)
