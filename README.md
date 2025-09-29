@@ -6,7 +6,7 @@ This project's goal is to create an app for tracking workouts and utilizing this
 
 <img width="500" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic1.PNG">
 
-<img width="500" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic2_editdata.PNG">
+<img width="250" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic2_editdata.PNG">
 
 <img width="500" alt="tracker" src="https://raw.githubusercontent.com/JensHmnn/workouttracker/master/pictures/app_pic3_datatable.PNG">
 
