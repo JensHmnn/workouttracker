@@ -246,17 +246,18 @@ class FitTrack(QWidget):
         self.load_data()
 
     # Create plots
-    # プロットの作成
+    # グラフの作成
     def create_chart(self):
         
         # Reset plotting area
+        # グラフの範囲をリセット
         self.figure.clear()
         self.canvas.draw()
         
         plt.style.use("seaborn-v0_8-darkgrid")
 
         # 1st plot - Scatter plot "Workout Durcation vs Burned Calories"
-        # 第1番のプロット -「運動時間と消費カロリー」の散布図
+        # 1つ目のグラフ -「運動時間と消費カロリー」の散布図
         if self.chart_type_box.currentText() == "Duration vs Calories":
             
             # Retrieving & manipulating data
@@ -277,6 +278,7 @@ class FitTrack(QWidget):
                 normalized_cal = [(cal_value - min_cal / (max_cal - min_cal)) for cal_value in calories]
 
             # Plotting
+            # グラフをプロットする
                 ax = self.figure.subplots()
                 ax.scatter(durations, calories, c=normalized_cal, cmap="winter")
                 ax.set_title("Duration VS Calories",fontsize=20)
@@ -298,9 +300,11 @@ class FitTrack(QWidget):
                 QMessageBox.warning(self, "Error", "Please enter some data first!")
 
         # 2nd plot - Scatter plot "Schedule"
+        # ２つ目のグラフ -「運動スケジュール」の散布図
         elif self.chart_type_box.currentText() == "Schedule":
             
             # Retrieving & manipulating data
+            # データの抽出と操作
             days = []
             months_years = []
             workouts = []
@@ -315,12 +319,14 @@ class FitTrack(QWidget):
                 workouts.append(workout)
             
             # Create color mapping
+            # 色分けの指定
             workouts_to_int = {"Upper Body": 0,
                                 "Lower Body": 1,
                                 "Cardio": 2}
             numerical_colors = [workouts_to_int[category] for category in workouts]
 
             # Plotting
+            # グラフをプロットする
             try:
                 ax = self.figure.subplots()
 
@@ -336,6 +342,7 @@ class FitTrack(QWidget):
                 ax.invert_yaxis()
 
                 # Creating the legend
+                # 凡例を作成
                 handles, labels  =  ax.get_legend_handles_labels()
                 ax.legend(handles, ['Upper', 'Lower', "Cardio"], bbox_to_anchor=(0.85, 1.12), loc='upper left', frameon=True)
 
@@ -345,10 +352,12 @@ class FitTrack(QWidget):
                 print("ERROR:{e}")
                 QMessageBox.warning(self, "Error", "Please enter some data first!")
         
-        # 3rd Plot - Monthly workout hours (Stacked Bar Plot)
+        # 3rd Plot -月ごとの運動時間 (Stacked Bar Plot)
+        # 3つ目のグラフ -「」の散布図（積み上げ棒グラフ）
         elif self.chart_type_box.currentText() == "Total Workout Hours per Month":
 
-            # Retrieving & manipulating the data
+            # Retrieving & manipulating data
+            # データの抽出と操作
             data = []
             query = QSqlQuery("SELECT date, duration, workout FROM workout ORDER BY date")
 
@@ -364,11 +373,13 @@ class FitTrack(QWidget):
             months_piv = months_df.pivot(index="year-month", columns="workout", values="monthly_hrs")
             months_piv.fillna(0, inplace=True)
             # Filling NANs to avoid issues when stacking the bars
+            # 積み上げ棒グラフでの不具合を避けるため、NaNを補完
 
             try:
                 ax = self.figure.subplots()
 
                 # Setting up the data
+                # データの準備
                 bar_x = months_piv.index
                 bar1_y = months_piv["Upper Body"]
                 bar2_y = months_piv["Lower Body"]
@@ -378,6 +389,7 @@ class FitTrack(QWidget):
                 bar3_bottom = bar1_y + bar2_y
             
                 # Assembling the stacked bar plot
+                # 積み上げ棒グラフの組み立て
                 ax.bar(bar_x, bar1_y, label='Upper', color="#0000ff")
                 ax.bar(bar_x, bar2_y, label='Lower', bottom=bar2_bottom, color="#00ff80")
                 ax.bar(bar_x, bar3_y, label='Cardio', bottom=bar3_bottom, color="#0080bf")
@@ -395,6 +407,7 @@ class FitTrack(QWidget):
                 QMessageBox.warning(self, "Error", "Please enter some data first!")
 
         # No plot selection
+        # グラフの選択なしの場合
         else:
             QMessageBox.warning(self, "Error", "Please chose a chart type.")
         
