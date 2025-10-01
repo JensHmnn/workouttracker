@@ -1,5 +1,3 @@
-<img alt="tracker" src="https://camo.githubusercontent.com/85cd9a2f8fd11e3bcbf0560faa8e81f649535edd7eb48d922d378d36efae57c6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a7570797465725f4e6f7465626f6f6b2d2532334641304630302e7376673f7374796c653d666c6174266c6f676f3d6a757079746572266c6f676f436f6c6f723d7768697465">
-
 # Workout Tracker
 
 This project's goal is to create an app for tracking workouts and utilizing this data to be able to gain various insights. It's still in an early stage. In the future I will add more variety to the types of workouts and the displayable charts. Also I will make the automatic calculation of burned calories more accurate by adding workout intensity.　The file "workout.db" contains a SQL database of randomly generated workout data. The code I used to create this database can be found in the "generate_db.py" file.
